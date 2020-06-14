@@ -1,0 +1,20 @@
+body {
+	background-image: url(images/bg.jpg);
+}
+.navi {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	color: #4D3803;
+	text-decoration: none;
+	border: 2px solid #4A3800;
+	background-color: #FFEBB7;
+	padding-top: 5px;
+	padding-right: 20px;
+	padding-bottom: 5px;
+	padding-left: 20px;
+}
+.disc {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #4D3900;
+}

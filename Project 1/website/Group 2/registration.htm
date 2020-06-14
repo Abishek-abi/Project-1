@@ -1,0 +1,120 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Survey Page</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />	
+	<script type = "text/javascript" src = "survey.js"></script>
+    <style type="text/css">
+
+    </style>
+   
+    <script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_validateForm() { //v4.0
+  var i,p,q,nm,test,num,min,max,errors='',args=MM_validateForm.arguments;
+  for (i=0; i<(args.length-2); i+=3) { test=args[i+2]; val=MM_findObj(args[i]);
+    if (val) { nm=val.name; if ((val=val.value)!="") {
+      if (test.indexOf('isEmail')!=-1) { p=val.indexOf('@');
+        if (p<1 || p==(val.length-1)) errors+='- '+nm+' must contain an e-mail address.\n';
+      } else if (test!='R') { num = parseFloat(val);
+        if (isNaN(val)) errors+='- '+nm+' must contain a number.\n';
+        if (test.indexOf('inRange') != -1) { p=test.indexOf(':');
+          min=test.substring(8,p); max=test.substring(p+1);
+          if (num<min || max<num) errors+='- '+nm+' must contain a number between '+min+' and '+max+'.\n';
+    } } } else if (test.charAt(0) == 'R') errors += '- '+nm+' is required.\n'; }
+  } if (errors) alert('The following error(s) occurred:\n'+errors);
+  document.MM_returnValue = (errors == '');
+}
+//-->
+    </script>
+</head>
+
+<body>
+	<div id = "site">
+		<div id = "title_bar">
+		  <div align="center"> </div>
+		</div>
+		<div id = "navi_bar">
+			<div id = "navi_text" align = "center">
+				<p><a href="index.html"><img src="images/logo.jpg" width="220" height="80" border="0"></a></p>
+				<p>&nbsp;</p>
+				<p><a href = "index.html" class = "navi">Home</a>
+			        <span class = "navi_divider">|</span> 
+			        <a href = "products.html"  class = "navi">Products</a>
+			        <span class = "navi_divider">|</span> 
+			        <a href = "registration.htm"  class = "navi">Register</a>
+			        <span class = "navi_divider">|</span> 
+			        <a href = "survey.html"  class = "navi">Survey</a>
+			        <span class = "navi_divider">|</span> 
+			        <a href = "http://www.google.com.au"  class = "navi">About us</a>
+			        <span class = "navi_divider">|</span> </p>
+				<p>&nbsp;			                  </p>
+			</div>
+		</div>
+		<div id = "fullb" align = "center">
+			<form name = "survey" onSubmit="MM_validateForm('name','','R','email','','RisEmail','phone','','R','comment','','R');return document.MM_returnValue">
+              <p>&nbsp;</p>
+              <table width="45%" height="372"  border="1" align="center" bgcolor="#FFFFFF">
+                <tr>
+                  <td width="33%"><div align="right">NAME</div></td>
+                  <td width="2%">&nbsp;</td>
+                  <td width="65%"><input name="name" type="text" id="name"></td>
+                </tr>
+                <tr>
+                  <td><div align="right">GENDER</div></td>
+                  <td>&nbsp;</td>
+                  <td><input name="gender" type="radio" value="radiobutton">
+      MALE
+        <input name="gender" type="radio" value="radiobutton" checked>
+      FEMALE</td>
+                </tr>
+                <tr>
+                  <td><div align="right">E-MAIL</div></td>
+                  <td>&nbsp;</td>
+                  <td><input name="email" type="text" id="email"></td>
+                </tr>
+                <tr>
+                  <td><div align="right">PHONE</div></td>
+                  <td>&nbsp;</td>
+                  <td><input name="phone" type="text" id="phone"></td>
+                </tr>
+                <tr>
+                  <td><div align="right">COUNTRY</div></td>
+                  <td>&nbsp;</td>
+                  <td><select name="country" id="country">
+                      <option value="AU" selected>Australia</option>
+                      <option value="JP">Japan</option>
+                      <option value="CHI">China</option>
+                  </select></td>
+                </tr>
+                <tr>
+                  <td><div align="right">COMMENT</div></td>
+                  <td>&nbsp;</td>
+                  <td><textarea name="comment" cols="40" id="comment"></textarea></td>
+                </tr>
+                <tr>
+                  <td colspan="3"><div align="center">
+                      <input type="submit" name="Submit" value="Submit">
+                      <input type="reset" name="Submit2" value="Reset">
+                  </div></td>
+                </tr>
+              </table>
+              <p>&nbsp;</p>
+		  </form>
+	  </div>		
+				<div id = "bottom">
+			<div id = "bottom_text" align = "center" class = "disc">
+				&copy; All Rights Reserved 2020 RD Cleaning</div>
+		</div>
+		</div>
+</body>
+
+</html>
